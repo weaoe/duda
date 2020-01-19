@@ -89,7 +89,7 @@
   <entry>
     <title>宝贝 大宝 小宝</title>
     <url>/Baby/</url>
-    <content><![CDATA[<p><img src="../img/home.jpg" alt="home"></p>
+    <content><![CDATA[<p><img src="home.jpg" alt="home"></p>
 ]]></content>
       <categories>
         <category>Aoe</category>
