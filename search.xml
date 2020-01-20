@@ -89,7 +89,8 @@
   <entry>
     <title>宝贝 大宝 小宝</title>
     <url>/Baby/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p><img src="http://img.weaoe.com/home.jpg" alt="home"></p>
+]]></content>
       <categories>
         <category>Aoe</category>
       </categories>
