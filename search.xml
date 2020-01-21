@@ -237,6 +237,9 @@
 <li>注册七牛增加图床</li>
 <li>增加img.weaoe.com解析</li>
 </ul>
+<h2 id="1-8-云音乐"><a href="#1-8-云音乐" class="headerlink" title="1.8 云音乐"></a>1.8 云音乐</h2><ul>
+<li>增加云音乐</li>
+</ul>
 <h2 id="1-2-站内搜索"><a href="#1-2-站内搜索" class="headerlink" title="1.2 站内搜索"></a>1.2 站内搜索</h2><h4 id="hexo配置文件-config-yml-1"><a href="#hexo配置文件-config-yml-1" class="headerlink" title="hexo配置文件~/_config.yml"></a>hexo配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#  path: search.xml</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
 
 <h4 id="landscape配置文件-config-yml"><a href="#landscape配置文件-config-yml" class="headerlink" title="landscape配置文件~/_config.yml"></a>landscape配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
