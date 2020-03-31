@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>外面的世界</title>
+    <url>/outworld/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>MoMo</category>
+      </categories>
+      <tags>
+        <tag>成长</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>季姬击鸡记</title>
     <url>/ji/</url>
     <content><![CDATA[<p>季姬寂，</p>
@@ -83,6 +94,59 @@
       </categories>
       <tags>
         <tag>工作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更新说明</title>
+    <url>/update/</url>
+    <content><![CDATA[<hr>
+<h2 id="3-27-URL改为urlname"><a href="#3-27-URL改为urlname" class="headerlink" title="3.27 URL改为urlname"></a>3.27 URL改为urlname</h2><h4 id="hexo配置文件-config-yml"><a href="#hexo配置文件-config-yml" class="headerlink" title="hexo配置文件~/_config.yml"></a>hexo配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: :title&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: :urlname&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="更改模版：增加URLname、update以及文件名增加日期"><a href="#更改模版：增加URLname、update以及文件名增加日期" class="headerlink" title="更改模版：增加URLname、update以及文件名增加日期"></a>更改模版：增加URLname、update以及文件名增加日期</h4><h4 id="更改文件：重命名所有文件的标题"><a href="#更改文件：重命名所有文件的标题" class="headerlink" title="更改文件：重命名所有文件的标题"></a>更改文件：重命名所有文件的标题</h4><h2 id="1-15-URL去掉日期"><a href="#1-15-URL去掉日期" class="headerlink" title="1.15 URL去掉日期"></a>1.15 URL去掉日期</h2><h4 id="hexo配置文件-config-yml-1"><a href="#hexo配置文件-config-yml-1" class="headerlink" title="hexo配置文件~/_config.yml"></a>hexo配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: :title&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-9-七牛图床"><a href="#1-9-七牛图床" class="headerlink" title="1.9 七牛图床"></a>1.9 七牛图床</h2><ul>
+<li>注册七牛增加图床</li>
+<li>增加img.weaoe.com解析</li>
+</ul>
+<h2 id="1-8-云音乐"><a href="#1-8-云音乐" class="headerlink" title="1.8 云音乐"></a>1.8 云音乐</h2><ul>
+<li>增加云音乐</li>
+</ul>
+<h2 id="1-2-站内搜索"><a href="#1-2-站内搜索" class="headerlink" title="1.2 站内搜索"></a>1.2 站内搜索</h2><h4 id="hexo配置文件-config-yml-2"><a href="#hexo配置文件-config-yml-2" class="headerlink" title="hexo配置文件~/_config.yml"></a>hexo配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#  path: search.xml</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<h4 id="landscape配置文件-config-yml"><a href="#landscape配置文件-config-yml" class="headerlink" title="landscape配置文件~/_config.yml"></a>landscape配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="JS文件search-form-js"><a href="#JS文件search-form-js" class="headerlink" title="JS文件search_form.js"></a>JS文件search_form.js</h4><p>路径：\hexo\node_modules\hexo\lib\plugins\helper</p>
+<p>修改为：bing.com</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#39;use strict&#39;;</span><br><span class="line"></span><br><span class="line">function searchFormHelper(options &#x3D; &#123;&#125;) &#123;</span><br><span class="line">  const &#123; config &#125; &#x3D; this;</span><br><span class="line">  const className &#x3D; options.class || &#39;search-form&#39;;</span><br><span class="line">  const &#123; text &#x3D; &#39;Search&#39;, button &#125; &#x3D; options;</span><br><span class="line"></span><br><span class="line">  return &#96;&lt;form action&#x3D;&quot;&#x2F;&#x2F;bing.com&#x2F;search&quot; method&#x3D;&quot;get&quot; accept-charset&#x3D;&quot;UTF-8&quot; class&#x3D;&quot;$&#123;className&#125;&quot;&gt;&lt;input type&#x3D;&quot;search&quot; name&#x3D;&quot;q&quot; class&#x3D;&quot;$&#123;className&#125;-input&quot;$&#123;text ? &#96; placeholder&#x3D;&quot;$&#123;text&#125;&quot;&#96; : &#39;&#39;&#125;&gt;$&#123;button ? &#96;&lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;$&#123;className&#125;-submit&quot;&gt;$&#123;typeof button &#x3D;&#x3D;&#x3D; &#39;string&#39; ? button : text&#125;&lt;&#x2F;button&gt;&#96; : &#39;&#39;&#125;&lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;sitesearch&quot; value&#x3D;&quot;$&#123;config.url&#125;&quot;&gt;&lt;&#x2F;form&gt;&#96;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; searchFormHelper;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="1-1-主题设置"><a href="#1-1-主题设置" class="headerlink" title="1.1 主题设置"></a>1.1 主题设置</h2><h3 id="landscape配置文件-config-yml-1"><a href="#landscape配置文件-config-yml-1" class="headerlink" title="landscape配置文件~/_config.yml"></a>landscape配置文件~/_config.yml</h3><h4 id="阅读更多"><a href="#阅读更多" class="headerlink" title="阅读更多"></a>阅读更多</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Content</span><br><span class="line">excerpt_link: 阅读更多</span><br><span class="line">fancybox: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="统计数字"><a href="#统计数字" class="headerlink" title="统计数字"></a>统计数字</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># widget behavior</span><br><span class="line">archive_type: &#39;monthly&#39;</span><br><span class="line">show_count: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="站点图标"><a href="#站点图标" class="headerlink" title="站点图标"></a>站点图标</h4><p>路径~\hexo\themes\landscape\source</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">favicon: &#x2F;favicon.png</span><br></pre></td></tr></table></figure>
+
+<h4 id="站点banner"><a href="#站点banner" class="headerlink" title="站点banner"></a>站点banner</h4><p>路径~\hexo\themes\landscape\source\css\images</p>
+<h2 id="1-0-Git配置"><a href="#1-0-Git配置" class="headerlink" title="1.0 Git配置"></a>1.0 Git配置</h2><h4 id="hexo配置文件-config-yml-3"><a href="#hexo配置文件-config-yml-3" class="headerlink" title="hexo配置文件~/_config.yml"></a>hexo配置文件~/_config.yml</h4><p>方法一：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@github.com:w***e&#x2F;w***e.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@e.coding.net:a*e&#x2F;w***e.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>方法二：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">   type: git  </span><br><span class="line">   repo: </span><br><span class="line">      github: https:&#x2F;&#x2F;e.coding.net&#x2F;a*e&#x2F;w***e.git</span><br><span class="line">      coding: https:&#x2F;&#x2F;github.com&#x2F;w***e&#x2F;w***e.github.io.git</span><br><span class="line">   branch: master</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Admin</category>
+      </categories>
+      <tags>
+        <tag>更新</tag>
       </tags>
   </entry>
   <entry>
@@ -278,59 +342,6 @@
       </categories>
       <tags>
         <tag>Aoe</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>更新说明</title>
-    <url>/update/</url>
-    <content><![CDATA[<hr>
-<h2 id="3-27-URL改为urlname"><a href="#3-27-URL改为urlname" class="headerlink" title="3.27 URL改为urlname"></a>3.27 URL改为urlname</h2><h4 id="hexo配置文件-config-yml"><a href="#hexo配置文件-config-yml" class="headerlink" title="hexo配置文件~/_config.yml"></a>hexo配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: :title&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p>修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: :urlname&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h4 id="更改模版：增加URLname、update以及文件名增加日期"><a href="#更改模版：增加URLname、update以及文件名增加日期" class="headerlink" title="更改模版：增加URLname、update以及文件名增加日期"></a>更改模版：增加URLname、update以及文件名增加日期</h4><h4 id="更改文件：重命名所有文件的标题"><a href="#更改文件：重命名所有文件的标题" class="headerlink" title="更改文件：重命名所有文件的标题"></a>更改文件：重命名所有文件的标题</h4><h2 id="1-15-URL去掉日期"><a href="#1-15-URL去掉日期" class="headerlink" title="1.15 URL去掉日期"></a>1.15 URL去掉日期</h2><h4 id="hexo配置文件-config-yml-1"><a href="#hexo配置文件-config-yml-1" class="headerlink" title="hexo配置文件~/_config.yml"></a>hexo配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p>修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: :title&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-9-七牛图床"><a href="#1-9-七牛图床" class="headerlink" title="1.9 七牛图床"></a>1.9 七牛图床</h2><ul>
-<li>注册七牛增加图床</li>
-<li>增加img.weaoe.com解析</li>
-</ul>
-<h2 id="1-8-云音乐"><a href="#1-8-云音乐" class="headerlink" title="1.8 云音乐"></a>1.8 云音乐</h2><ul>
-<li>增加云音乐</li>
-</ul>
-<h2 id="1-2-站内搜索"><a href="#1-2-站内搜索" class="headerlink" title="1.2 站内搜索"></a>1.2 站内搜索</h2><h4 id="hexo配置文件-config-yml-2"><a href="#hexo配置文件-config-yml-2" class="headerlink" title="hexo配置文件~/_config.yml"></a>hexo配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#  path: search.xml</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-
-<h4 id="landscape配置文件-config-yml"><a href="#landscape配置文件-config-yml" class="headerlink" title="landscape配置文件~/_config.yml"></a>landscape配置文件~/_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="JS文件search-form-js"><a href="#JS文件search-form-js" class="headerlink" title="JS文件search_form.js"></a>JS文件search_form.js</h4><p>路径：\hexo\node_modules\hexo\lib\plugins\helper</p>
-<p>修改为：bing.com</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#39;use strict&#39;;</span><br><span class="line"></span><br><span class="line">function searchFormHelper(options &#x3D; &#123;&#125;) &#123;</span><br><span class="line">  const &#123; config &#125; &#x3D; this;</span><br><span class="line">  const className &#x3D; options.class || &#39;search-form&#39;;</span><br><span class="line">  const &#123; text &#x3D; &#39;Search&#39;, button &#125; &#x3D; options;</span><br><span class="line"></span><br><span class="line">  return &#96;&lt;form action&#x3D;&quot;&#x2F;&#x2F;bing.com&#x2F;search&quot; method&#x3D;&quot;get&quot; accept-charset&#x3D;&quot;UTF-8&quot; class&#x3D;&quot;$&#123;className&#125;&quot;&gt;&lt;input type&#x3D;&quot;search&quot; name&#x3D;&quot;q&quot; class&#x3D;&quot;$&#123;className&#125;-input&quot;$&#123;text ? &#96; placeholder&#x3D;&quot;$&#123;text&#125;&quot;&#96; : &#39;&#39;&#125;&gt;$&#123;button ? &#96;&lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;$&#123;className&#125;-submit&quot;&gt;$&#123;typeof button &#x3D;&#x3D;&#x3D; &#39;string&#39; ? button : text&#125;&lt;&#x2F;button&gt;&#96; : &#39;&#39;&#125;&lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;sitesearch&quot; value&#x3D;&quot;$&#123;config.url&#125;&quot;&gt;&lt;&#x2F;form&gt;&#96;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; searchFormHelper;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="1-1-主题设置"><a href="#1-1-主题设置" class="headerlink" title="1.1 主题设置"></a>1.1 主题设置</h2><h3 id="landscape配置文件-config-yml-1"><a href="#landscape配置文件-config-yml-1" class="headerlink" title="landscape配置文件~/_config.yml"></a>landscape配置文件~/_config.yml</h3><h4 id="阅读更多"><a href="#阅读更多" class="headerlink" title="阅读更多"></a>阅读更多</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Content</span><br><span class="line">excerpt_link: 阅读更多</span><br><span class="line">fancybox: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="统计数字"><a href="#统计数字" class="headerlink" title="统计数字"></a>统计数字</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># widget behavior</span><br><span class="line">archive_type: &#39;monthly&#39;</span><br><span class="line">show_count: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="站点图标"><a href="#站点图标" class="headerlink" title="站点图标"></a>站点图标</h4><p>路径~\hexo\themes\landscape\source</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">favicon: &#x2F;favicon.png</span><br></pre></td></tr></table></figure>
-
-<h4 id="站点banner"><a href="#站点banner" class="headerlink" title="站点banner"></a>站点banner</h4><p>路径~\hexo\themes\landscape\source\css\images</p>
-<h2 id="1-0-Git配置"><a href="#1-0-Git配置" class="headerlink" title="1.0 Git配置"></a>1.0 Git配置</h2><h4 id="hexo配置文件-config-yml-3"><a href="#hexo配置文件-config-yml-3" class="headerlink" title="hexo配置文件~/_config.yml"></a>hexo配置文件~/_config.yml</h4><p>方法一：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@github.com:w***e&#x2F;w***e.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@e.coding.net:a*e&#x2F;w***e.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>方法二：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">   type: git  </span><br><span class="line">   repo: </span><br><span class="line">      github: https:&#x2F;&#x2F;e.coding.net&#x2F;a*e&#x2F;w***e.git</span><br><span class="line">      coding: https:&#x2F;&#x2F;github.com&#x2F;w***e&#x2F;w***e.github.io.git</span><br><span class="line">   branch: master</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Admin</category>
-      </categories>
-      <tags>
-        <tag>更新</tag>
       </tags>
   </entry>
 </search>
