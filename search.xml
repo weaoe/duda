@@ -19,6 +19,8 @@
 <p>鸡即棘鸡。</p>
 <p>棘鸡饥叽，</p>
 <p>季姬及箕稷济鸡。</p>
+<a id="more"></a>
+
 <p>鸡既济，</p>
 <p>跻姬笈，</p>
 <p>季姬忌，</p>
@@ -109,6 +111,8 @@
 
 <p>修改为</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: :title&#x2F;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h2 id="1-9-七牛图床"><a href="#1-9-七牛图床" class="headerlink" title="1.9 七牛图床"></a>1.9 七牛图床</h2><ul>
 <li>注册七牛增加图床</li>
